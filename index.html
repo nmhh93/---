@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10213b">
+<title>سند | Sanad — منصة قانون العمل الإماراتي</title>
+<style>
+:root{--navy:#12385b;--navy2:#1d4a70;--gold:#c9a34d;--ink:#182b3f;--muted:#6f7b89;--bg:#f8f5ee;--card:#fffdfa;--line:#e8e1d4;--green:#16834a;--shadow:0 12px 30px rgba(16,33,59,.07)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.65}
+button,input,textarea,select{font:inherit}button{cursor:pointer}
+.app{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh}
+.sidebar{background:linear-gradient(180deg,#12385b,#0d2944);color:#fff;padding:24px 16px;display:flex;flex-direction:column;gap:25px}
+.brand{display:flex;align-items:center;gap:12px;padding:4px 8px}.brand-mark{width:54px;height:54px;border-radius:13px;background:#f8f5ee;object-fit:contain;padding:2px;border:1px solid rgba(201,163,77,.55)}.brand h1{font-size:21px;margin:0}.brand p{font-size:11px;color:#d7dfeb;margin:0}
+.nav{display:grid;gap:7px}.nav button{border:0;background:transparent;color:#d7dfeb;text-align:right;padding:12px;border-radius:11px;display:flex;gap:12px;align-items:center}.nav button.active,.nav button:hover{background:#243b5c;color:#fff}.nav .ico{width:22px;text-align:center;font-size:18px}
+.side-note{margin-top:auto;padding:13px;border:1px solid #3a4c67;border-radius:12px;color:#d7dfeb;font-size:12px}
+main{min-width:0;padding:28px clamp(16px,3vw,42px) 45px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:25px}.eyebrow{font-size:12px;color:var(--muted)}h2{font-size:26px;margin:2px 0 4px}h3{font-size:17px;margin:0 0 10px}.top-actions{display:flex;align-items:center;gap:9px}.status{background:#e6f4ee;color:var(--green);padding:7px 11px;border-radius:999px;font-size:12px}.avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#e9edf5;color:var(--navy);font-weight:bold}
+.page{display:none}.page.active{display:block}.hero{background:linear-gradient(120deg,#10213b,#1d3b61);color:#fff;border-radius:20px;padding:26px;display:grid;grid-template-columns:1.4fr .6fr;gap:20px;overflow:hidden;position:relative}.hero h2{font-size:25px;max-width:570px}.hero p{color:#d9e2ee;max-width:590px;font-size:14px}.hero .hero-mark{width:min(100%,190px);aspect-ratio:1;object-fit:contain;align-self:center;justify-self:center;background:#f8f5ee;border-radius:24px;padding:8px;box-shadow:0 12px 28px #061a2c44}.btn{border:0;border-radius:10px;padding:11px 15px;font-weight:bold}.btn-primary{background:var(--gold);color:var(--navy)}.btn-dark{background:var(--navy);color:#fff}.btn-light{background:#edf1f7;color:var(--navy)}.btn-outline{border:1px solid var(--line);background:#fff;color:var(--ink)}
+.grid{display:grid;gap:15px}.grid.stats{grid-template-columns:repeat(3,minmax(0,1fr));margin:18px 0}.stat,.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}.stat small{color:var(--muted)}.stat strong{display:block;font-size:24px;margin-top:6px}.stat .stat-ico{float:left;color:#a78335;font-size:22px}.section-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:25px 0 12px}.section-head h3{margin:0}.service-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.service{border:1px solid var(--line);background:#fff;border-radius:15px;padding:18px;text-align:right;display:flex;flex-direction:column;gap:8px;min-height:150px;color:var(--ink)}.service:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 12px 24px rgba(18,56,91,.08)}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #c9a34d88;outline-offset:2px}.service .symbol{font-size:25px;color:#a78335}.service p{margin:0;color:var(--muted);font-size:12px}.two-col{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:15px}.list{display:grid;gap:12px}.list-item{display:flex;gap:12px;align-items:flex-start}.list-item .symbol{background:#f4f0e6;color:#9c762e;width:38px;height:38px;display:grid;place-items:center;border-radius:10px;flex-shrink:0}.list-item p{margin:2px 0 0;font-size:12px;color:var(--muted)}.tag{font-size:11px;background:#eef2f8;color:#53657e;border-radius:6px;padding:4px 7px;display:inline-block}
+.notice{padding:13px 15px;border-radius:12px;background:#fff8e9;border:1px solid #f0dfb8;color:#73551c;font-size:12px;margin-top:15px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.field{display:grid;gap:6px}.field label{font-size:13px;font-weight:bold}.field input,.field select,.field textarea{border:1px solid #d9e0ea;border-radius:10px;padding:11px;background:#fff;width:100%;min-width:0}.field textarea{min-height:100px;resize:vertical}.full{grid-column:1/-1}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.chat-wrap{display:flex;flex-direction:column;gap:14px}.chat-box{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px;min-height:300px;display:flex;flex-direction:column;gap:13px}.bubble{padding:12px 14px;border-radius:13px;max-width:88%;font-size:14px}.bubble.bot{background:#f0f3f8;align-self:flex-start}.bubble.user{background:var(--navy);color:#fff;align-self:flex-end}.chat-input{display:flex;gap:8px}.chat-input input{flex:1;min-width:0;border:1px solid var(--line);border-radius:10px;padding:12px}.empty{border:1px dashed #cbd4e1;border-radius:14px;padding:28px;text-align:center;color:var(--muted)}.empty strong{display:block;color:var(--ink);margin-bottom:6px}.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{text-align:right;padding:12px;border-bottom:1px solid var(--line)}.table th{color:var(--muted);font-weight:normal}.footer{margin-top:26px;color:var(--muted);font-size:11px;text-align:center}
+.mobile-bar{display:none}
+@media(max-width:900px){.app{grid-template-columns:1fr}.sidebar{display:none}main{padding:20px 15px 85px}.mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);z-index:5;justify-content:space-around;padding:7px 4px calc(7px + env(safe-area-inset-bottom));box-shadow:0 -5px 20px #10213b0d}.mobile-bar button{border:0;background:transparent;color:#69768a;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:2px;padding:5px}.mobile-bar button.active{color:#9c762e;font-weight:bold}.mobile-bar span{font-size:18px}.hero{grid-template-columns:1fr}.hero .hero-mark{display:none}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col{grid-template-columns:1fr}.grid.stats{grid-template-columns:repeat(3,minmax(0,1fr))}.stat{padding:12px}.stat strong{font-size:19px}.topbar{align-items:flex-start}.status{display:none}}
+@media(max-width:480px){h2{font-size:22px}.hero{padding:20px}.hero h2{font-size:22px}.grid.stats{grid-template-columns:1fr 1fr}.grid.stats .stat:last-child{grid-column:1/-1}.service-grid{grid-template-columns:1fr 1fr}.service{padding:13px;min-height:145px}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.top-actions .btn{padding:8px 10px;font-size:12px}.section-head{align-items:flex-start}.table{font-size:11px}.table th,.table td{padding:8px 5px}}
+
+/* SANAD VISUAL REDESIGN v2 — premium editorial dashboard */
+:root{--navy:#102f50;--navy2:#19496f;--gold:#c6a04a;--ink:#18324a;--muted:#718092;--bg:#f3f5f8;--card:#ffffff;--line:#e1e7ed;--green:#16834a;--shadow:0 10px 28px rgba(16,47,80,.055)}
+body{background:#f3f5f8;color:var(--ink);font-family:Tahoma,"Segoe UI",Arial,sans-serif;letter-spacing:0}
+.app{grid-template-columns:264px minmax(0,1fr);gap:0}
+.sidebar{background:#102f50;background-image:radial-gradient(ellipse at top right,rgba(198,160,74,.14),transparent 40%);padding:25px 17px;gap:27px;box-shadow:6px 0 28px rgba(16,47,80,.06)}
+.brand{padding:8px 7px 20px;border-bottom:1px solid rgba(255,255,255,.12);gap:13px}.brand-mark{width:58px;height:58px;border-radius:15px;background:#f8f5ee;padding:3px;border:1px solid rgba(198,160,74,.7)}.brand h1{font-size:20px;letter-spacing:.2px}.brand p{font-size:10px;line-height:1.8;color:#d5dfeb;margin-top:4px}
+.nav{gap:6px}.nav button{position:relative;padding:13px 14px;border-radius:12px;color:#d2dce7;transition:background .18s ease,transform .18s ease}.nav button:hover{background:rgba(255,255,255,.08);transform:translateX(-2px)}.nav button.active{background:linear-gradient(100deg,rgba(198,160,74,.22),rgba(255,255,255,.08));color:#fff;box-shadow:inset -3px 0 0 var(--gold)}.nav .ico{font-size:19px;color:#e0bd68}
+.side-note{background:rgba(255,255,255,.045);border-color:rgba(255,255,255,.12);border-radius:14px;line-height:1.9;padding:15px;color:#d8e1eb}
+main{padding:30px clamp(18px,3.4vw,48px) 48px;max-width:1600px;width:100%;margin:0 auto}.topbar{padding:0 0 20px;border-bottom:1px solid #e2e7ed;margin-bottom:25px}.eyebrow{font-size:12px;color:#758397;line-height:1.8}h2{font-size:28px;letter-spacing:-.4px;color:#143654}h3{font-size:17px;color:#173b5a}.top-actions{gap:11px}.status{background:#e9f5ef;color:#23744d;border:1px solid #d6ebdf;padding:7px 12px}.avatar{border-radius:13px!important;width:42px;height:42px!important}
+.hero{background:linear-gradient(112deg,#0e2c49 0%,#17476b 65%,#1d5677 100%);border-radius:22px;padding:32px;grid-template-columns:minmax(0,1.35fr) minmax(150px,.65fr);box-shadow:0 18px 36px rgba(16,47,80,.12);min-height:245px}.hero:after{content:"";position:absolute;width:260px;height:260px;border:1px solid rgba(255,255,255,.08);border-radius:50%;left:-80px;bottom:-150px;box-shadow:0 0 0 26px rgba(255,255,255,.025),0 0 0 52px rgba(255,255,255,.02);pointer-events:none}.hero h2{color:#fff;font-size:30px;line-height:1.5;margin:13px 0 7px}.hero p{font-size:14px;line-height:2;color:#dce7f0}.hero .hero-mark{width:min(100%,170px);border-radius:23px;background:#f8f5ee;border:1px solid rgba(198,160,74,.55);box-shadow:0 12px 28px rgba(0,0,0,.12)}.tag{background:#eef2f7;color:#53677e;border-radius:7px;font-weight:600}.hero .tag{letter-spacing:.4px;padding:6px 10px}
+.btn{border-radius:11px;padding:12px 16px;transition:transform .15s ease,box-shadow .15s ease}.btn:hover{transform:translateY(-1px);box-shadow:0 7px 16px rgba(16,47,80,.12)}.btn-primary{background:#d6b25e;color:#142f49}.btn-primary:hover{background:#e2c273}.btn-dark{background:#123858;color:white}.btn-outline{border-color:#dce3eb;background:#fff}.grid.stats{gap:14px;margin:20px 0 28px}.stat,.card{border:1px solid #e2e8ee;border-radius:17px;box-shadow:0 5px 18px rgba(16,47,80,.035);padding:20px}.stat{position:relative;overflow:hidden}.stat:after{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:#d2ae58}.stat small{font-size:12px;color:#7b8998}.stat strong{font-size:23px;color:#163b5a}.stat .stat-ico{color:#b18c39}
+.section-head{margin:29px 0 14px}.section-head h3{font-size:18px}.service-grid{gap:14px}.service{position:relative;border:1px solid #e2e8ee;border-radius:16px;background:#fff;padding:19px;min-height:158px;gap:10px;transition:all .18s ease;box-shadow:0 4px 14px rgba(16,47,80,.025)}.service:hover{border-color:#cfb36f;transform:translateY(-3px);box-shadow:0 12px 25px rgba(16,47,80,.08)}.service .symbol{width:42px;height:42px;display:grid;place-items:center;border-radius:13px;background:#f6f1e5;color:#a27d2f;font-size:22px}.service b{font-size:15px;color:#183b58}.service p{font-size:12px;line-height:1.9;color:#7b8795}.two-col{gap:17px}.list{gap:15px}.list-item .symbol{background:#f5f0e4;color:#9d792f;border-radius:12px;width:40px;height:40px}.notice{background:#fff8e8;border:1px solid #efdfb7;border-radius:13px;line-height:1.9;padding:14px 16px}.chat-box{background:#f8fafc;border-color:#e3e9ef;border-radius:16px}.bubble.bot{background:#eaf0f6;color:#25445e}.bubble.user{background:#123858}.field input,.field select,.field textarea,.chat-input input{border-color:#dce4eb;border-radius:11px;background:#fff}.field input:focus,.field select:focus,.field textarea:focus,.chat-input input:focus{border-color:#b99a4b;outline:3px solid #c6a04a22}.empty{border-color:#d6dfe8;background:#fafbfd;border-radius:14px;line-height:1.9}.table th,.table td{padding:13px 12px}.footer{padding:18px 0 0;border-top:1px solid #e2e7ed;margin-top:30px}
+.mobile-bar{background:rgba(255,255,255,.97);backdrop-filter:blur(14px);border-top:1px solid #e0e6ed;box-shadow:0 -7px 24px rgba(16,47,80,.07)}.mobile-bar button{font-size:10px;min-width:54px}.mobile-bar button.active{color:#a17c2d}.mobile-bar span{font-size:20px}
+@media(max-width:900px){.app{grid-template-columns:1fr}.sidebar{display:none}main{padding:20px 15px 95px}.hero{padding:25px;min-height:unset}.hero .hero-mark{display:block;width:108px;grid-row:1;justify-self:start}.hero{grid-template-columns:1fr auto;align-items:center}.hero>div{grid-column:1/-1;grid-row:2}.hero h2{font-size:25px}.grid.stats{gap:9px}.stat{padding:14px}.service-grid{gap:10px}.service{padding:15px;min-height:150px}.topbar{padding-bottom:16px}.top-actions{gap:7px}}
+@media(max-width:480px){main{padding:17px 12px 94px}h2{font-size:23px}.hero{padding:20px;border-radius:18px;grid-template-columns:1fr}.hero>div{grid-row:auto}.hero .hero-mark{display:none}.hero h2{font-size:23px}.hero p{font-size:13px}.grid.stats{grid-template-columns:1fr 1fr}.grid.stats .stat:last-child{grid-column:1/-1}.service-grid{grid-template-columns:1fr 1fr}.service{min-height:147px;padding:13px;border-radius:14px}.service .symbol{width:37px;height:37px}.stat strong{font-size:17px}.status{display:none}.topbar{gap:8px}.top-actions .btn{padding:8px 10px}.card{padding:15px}.section-head{gap:8px}.mobile-bar button{padding:5px 2px}}
+
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><img class="brand-mark" src="sanad-logo.jpg" alt="شعار سند Sanad"><div><h1>سند | SANAD</h1><p>قانون العمل الإماراتي</p></div></div>
+  <nav class="nav" aria-label="التنقل الرئيسي">
+    <button class="active" data-page="home"><span class="ico">⌂</span>الرئيسية</button>
+    <button data-page="assistant"><span class="ico">✧</span>اسألي سند</button>
+    <button data-page="rights"><span class="ico">⚖</span>دليل الحقوق</button>
+    <button data-page="documents"><span class="ico">▤</span>مستنداتي</button>
+    <button data-page="cases"><span class="ico">☷</span>ملفات النزاع</button>
+    <button data-page="admin"><span class="ico">⚙</span>الإدارة</button>
+  </nav>
+  <div class="side-note">🔒 <b>الخصوصية أولًا</b><br>هذا نموذج تجريبي. لا ترفعي مستندات حقيقية أو بيانات شخصية في هذه النسخة.</div>
+</aside>
+<main>
+  <header class="topbar"><div><div class="eyebrow">منصة متخصصة في قانون العمل الإماراتي</div><h2 id="page-title">مرحبًا بك في سند</h2><div class="eyebrow" id="page-subtitle">منصة متخصصة في قانون العمل الإماراتي وتنظيم المستندات العمالية</div></div><div class="top-actions"><span class="status">● نموذج تفاعلي</span><button class="btn btn-outline" id="languageBtn">EN</button><div class="avatar" style="overflow:hidden;background:#f8f5ee;border:1px solid #e4d7b8"><img src="sanad-logo.jpg" alt="سند" style="width:100%;height:100%;object-fit:cover"></div></div></header>
+
+  <section class="page active" id="page-home">
+    <div class="hero"><div><span class="tag" style="background:#2b4260;color:#f0d28b">SANAD OS · DEMO</span><h2>قانون العمل الإماراتي.. بوضوح وثقة.</h2><p>ابدئي بسؤال حول قانون العمل الإماراتي، أو تعرّفي على موضوعاته، أو نظّمي المستندات المرتبطة بمسألة عمالية داخل دولة الإمارات.</p><button class="btn btn-primary" data-go="assistant">ابدئي بسؤال قانوني ←</button></div><img class="hero-mark" src="sanad-logo.jpg" alt="شعار سند وحماية حقوق العمل"></div>
+    <div class="grid stats"><div class="stat"><span class="stat-ico">✧</span><small>المساعد القانوني</small><strong>متاح للتجربة</strong></div><div class="stat"><span class="stat-ico">▤</span><small>المستندات المحفوظة</small><strong id="docCount">0</strong></div><div class="stat"><span class="stat-ico">☷</span><small>ملفات النزاع</small><strong id="caseCount">0</strong></div></div>
+    <div class="section-head"><h3>الخدمات الرئيسية</h3><span class="eyebrow">اختاري خدمة للبدء</span></div>
+    <div class="grid service-grid">
+      <button class="service" data-go="assistant"><span class="symbol">✧</span><b>اسألي سند</b><p>استفسارات حول قانون العمل الإماراتي والأجور وعقود العمل.</p></button>
+      <button class="service" data-go="rights"><span class="symbol">⚖</span><b>دليل الحقوق</b><p>استكشفي موضوعات العمل الشائعة.</p></button>
+      <button class="service" data-go="documents"><span class="symbol">▤</span><b>مستنداتي</b><p>أنشئي قائمة تجريبية للمستندات.</p></button>
+      <button class="service" data-go="cases"><span class="symbol">☷</span><b>ملف نزاع جديد</b><p>رتّبي الوقائع والمستندات المطلوبة.</p></button>
+      <button class="service" data-go="admin"><span class="symbol">⚙</span><b>لوحة الإدارة</b><p>استعرضي متطلبات تشغيل المنصة.</p></button>
+      <button class="service" data-go="rights"><span class="symbol">⌕</span><b>مصادر قانونية</b><p>تحققي من التشريع والجهة المختصة قبل الاعتماد.</p></button>
+    </div>
+    <div class="notice"><b>تنبيه قانوني:</b> هذه واجهة أولية وليست خدمة استشارة قانونية معتمدة. لم يتم ربطها حتى الآن بمصادر تشريعية مباشرة أو بجهة حكومية.</div>
+  </section>
+
+  <section class="page" id="page-assistant">
+    <div class="two-col">
+      <div class="chat-wrap"><div class="card"><h3>اسألي سند</h3><p class="eyebrow">اكتبي سؤالك بشكل عام، دون أسماء أو أرقام هوية أو تفاصيل سرية.</p>
+        <div class="chat-box" id="chatBox" aria-live="polite"><div class="bubble bot">مرحبًا، أنا واجهة المساعد التجريبية في سند. يمكنني إرشادك إلى كيفية صياغة السؤال، لكن الإجابات هنا ليست ناتجة عن محرك ذكاء اصطناعي متصل أو قاعدة قانونية محدثة.</div><div class="bubble bot">جرّبي مثلًا: «ما المستندات التي أحتاج إلى جمعها عند تأخر الراتب؟»</div></div>
+        <form class="chat-input" id="chatForm"><input id="chatInput" placeholder="اكتبي سؤالك هنا..." aria-label="سؤالك" required><button class="btn btn-dark">إرسال</button></form>
+      </div></div>
+      <div class="card"><h3>قبل طرح السؤال</h3><div class="list">
+        <div class="list-item"><div class="symbol">1</div><div><b>حددي نوع العمل</b><p>القطاع الخاص أم نظام خاص بمنطقة مالية أم فئة أخرى؟</p></div></div>
+        <div class="list-item"><div class="symbol">2</div><div><b>رتّبي الوقائع</b><p>اذكري التواريخ التقريبية والحدث المطلوب فهمه.</p></div></div>
+        <div class="list-item"><div class="symbol">3</div><div><b>راجعي المصدر</b><p>تأكدي من التشريع الساري والجهة المختصة قبل اتخاذ قرار.</p></div></div>
+      </div><div class="notice">لا ترسلي بيانات شخصية أو مستندات سرية في هذا النموذج؛ لا توجد مصادقة أو تخزين آمن متصل.</div></div>
+    </div>
+  </section>
+
+  <section class="page" id="page-rights">
+    <div class="card"><h3>دليل قانون العمل الإماراتي</h3><p class="eyebrow">اختاري موضوعًا لعرض قائمة تحقق عامة. التفاصيل القانونية تحتاج إلى ربط بمصدر رسمي ومراجعة قبل النشر.</p>
+      <div class="grid service-grid" id="topicGrid">
+        <button class="service" data-topic="salary"><span class="symbol">د.إ</span><b>الأجور والرواتب</b><p>جمع كشوف الرواتب والمراسلات ذات الصلة.</p></button>
+        <button class="service" data-topic="contract"><span class="symbol">▤</span><b>عقد العمل</b><p>مراجعة نسخة العقد والتعديلات المكتوبة.</p></button>
+        <button class="service" data-topic="leave"><span class="symbol">◷</span><b>الإجازات</b><p>تنظيم سجل الإجازات والرصيد المعتمد.</p></button>
+        <button class="service" data-topic="end"><span class="symbol">✓</span><b>نهاية الخدمة</b><p>تجهيز بيانات الخدمة والأجر لمراجعة الاستحقاق.</p></button>
+        <button class="service" data-topic="complaint"><span class="symbol">⚖</span><b>الشكاوى والتسوية</b><p>ترتيب التسلسل الزمني والطلبات والمرفقات.</p></button>
+        <button class="service" data-topic="hours"><span class="symbol">◴</span><b>ساعات العمل</b><p>تجميع الجداول وسجلات الحضور عند توفرها.</p></button>
+      </div>
+    </div>
+    <div class="card" id="topicDetail" style="margin-top:15px"><h3>قائمة التحقق</h3><div class="empty"><strong>اختاري موضوعًا أعلاه</strong>ستظهر هنا قائمة تحضيرية عامة للمستندات والأسئلة.</div></div>
+    <div class="notice">نطاق المنصة: قانون العمل الإماراتي فقط. يجب التحقق من النصوص النافذة والاستثناءات المنطبقة من المصادر الرسمية قبل تقديم أي معلومة قانونية.</div>
+  </section>
+
+  <section class="page" id="page-documents">
+    <div class="two-col"><div class="card"><h3>إضافة سجل مستند تجريبي</h3><p class="eyebrow">هذه الوظيفة تحفظ أسماء السجلات محليًا في ذاكرة الصفحة فقط؛ لا ترفعي ملفًا فعليًا.</p>
+      <form id="docForm" class="form-grid"><div class="field"><label for="docName">اسم المستند</label><input id="docName" placeholder="مثال: عقد العمل" required></div><div class="field"><label for="docType">نوع المستند</label><select id="docType"><option>عقد عمل</option><option>كشف راتب</option><option>مراسلات</option><option>إثبات هوية (لا ترفعيه)</option><option>أخرى</option></select></div><div class="field full"><label for="docNote">ملاحظة غير حساسة (اختياري)</label><input id="docNote" placeholder="مثال: نسخة تحتاج إلى مراجعة"></div><div class="full"><button class="btn btn-dark">إضافة إلى القائمة</button></div></form>
+    </div><div class="card"><h3>حماية المستندات في النسخة النهائية</h3><div class="list"><div class="list-item"><div class="symbol">🔐</div><div><b>تشفير الملفات</b><p>تخزين مشفر وإدارة مفاتيح مناسبة.</p></div></div><div class="list-item"><div class="symbol">◉</div><div><b>صلاحيات الوصول</b><p>كل مستخدم يرى ملفاته فقط، مع سجل تدقيق.</p></div></div><div class="list-item"><div class="symbol">↻</div><div><b>النسخ الاحتياطي</b><p>سياسة استعادة واختبار دوري.</p></div></div></div></div></div>
+    <div class="card" style="margin-top:15px"><div class="section-head"><h3>سجل المستندات</h3><button class="btn btn-outline" id="clearDocs">مسح القائمة</button></div><div id="docList" class="empty"><strong>لا توجد سجلات بعد</strong>أضيفي سجلًا تجريبيًا من النموذج أعلاه.</div></div>
+  </section>
+
+  <section class="page" id="page-cases">
+    <div class="two-col"><div class="card"><h3>إنشاء ملف نزاع تجريبي</h3><p class="eyebrow">لا تدخلي أسماء أو بيانات شخصية حقيقية في هذا النموذج.</p>
+      <form id="caseForm" class="form-grid"><div class="field"><label for="caseType">نوع الموضوع</label><select id="caseType"><option>تأخر الأجور</option><option>انتهاء علاقة العمل</option><option>الإجازات</option><option>العقد أو الشروط</option><option>موضوع آخر</option></select></div><div class="field"><label for="caseDate">تاريخ الواقعة التقريبي</label><input id="caseDate" type="date"></div><div class="field full"><label for="caseSummary">ملخص الوقائع</label><textarea id="caseSummary" placeholder="اكتبي ملخصًا غير معرّف للأطراف..." required></textarea></div><div class="field full"><label for="caseRequest">ما الذي تريدين الوصول إليه؟</label><input id="caseRequest" placeholder="مثال: فهم الخطوات والمستندات اللازمة"></div><div class="full"><button class="btn btn-dark">إنشاء ملف تجريبي</button></div></form>
+    </div><div class="card"><h3>مراحل تجهيز الملف</h3><div class="list"><div class="list-item"><div class="symbol">1</div><div><b>الوقائع</b><p>تسلسل زمني واضح ومختصر.</p></div></div><div class="list-item"><div class="symbol">2</div><div><b>الأدلة</b><p>قائمة بالمستندات ذات الصلة دون رفعها هنا.</p></div></div><div class="list-item"><div class="symbol">3</div><div><b>المراجعة</b><p>مراجعة قانونية وتحديد الجهة والقناة الرسمية.</p></div></div><div class="list-item"><div class="symbol">4</div><div><b>التقديم</b><p>يتم خارج هذا النموذج عبر القنوات المعتمدة فقط.</p></div></div></div></div></div>
+    <div class="card" style="margin-top:15px"><div class="section-head"><h3>ملفات النزاع التجريبية</h3><button class="btn btn-outline" id="clearCases">مسح القائمة</button></div><div id="caseList" class="empty"><strong>لا توجد ملفات</strong>أنشئي ملفًا تجريبيًا من النموذج أعلاه.</div></div>
+  </section>
+
+  <section class="page" id="page-admin">
+    <div class="hero"><div><span class="tag" style="background:#2b4260;color:#f0d28b">OWNER CONSOLE · CONCEPT</span><h2>بوابة الإدارة والتشغيل</h2><p>هذه شاشة توضيحية لمتطلبات الإدارة. لا يوجد تسجيل دخول إداري أو اتصال بخدمات خلفية في النموذج الحالي.</p></div><div class="hero-mark">⚙</div></div>
+    <div class="grid service-grid" style="margin-top:16px">
+      <div class="card"><span class="symbol">▤</span><h3>المصادر القانونية</h3><p class="eyebrow">يلزم إعداد سجل مصادر يتضمن الجهة والرابط وتاريخ التحقق وتاريخ السريان.</p><span class="tag">غير مربوط</span></div>
+      <div class="card"><span class="symbol">◉</span><h3>إدارة الصلاحيات</h3><p class="eyebrow">يلزم نظام هوية وأدوار وصلاحيات إدارية ومصادقة متعددة العوامل.</p><span class="tag">غير مفعّل</span></div>
+      <div class="card"><span class="symbol">⌁</span><h3>جودة الإجابات</h3><p class="eyebrow">يلزم اختبار إجابات بمصادرها، ورصد الإجابات غير المدعومة وآلية تصعيد.</p><span class="tag">غير مربوط</span></div>
+      <div class="card"><span class="symbol">♧</span><h3>الخصوصية والأمان</h3><p class="eyebrow">يلزم تقييم أثر الخصوصية، وسياسة احتفاظ وحذف، واختبار أمني.</p><span class="tag">بحاجة إلى تنفيذ</span></div>
+      <div class="card"><span class="symbol">↻</span><h3>النسخ والاستعادة</h3><p class="eyebrow">يلزم نسخ احتياطي آمن واختبارات استعادة موثقة.</p><span class="tag">غير مربوط</span></div>
+      <div class="card"><span class="symbol">✓</span><h3>اعتمادات قانونية</h3><p class="eyebrow">يجب التحقق من أي ادعاء باعتماد رسمي أو تسجيل علامة تجارية قبل نشره.</p><span class="tag">يتطلب تحققًا</span></div>
+    </div>
+    <div class="notice"><b>شرط الإطلاق:</b> لا تعرضي هذه الواجهة باعتبارها خدمة حكومية أو منصة معتمدة، ولا تستخدمي عبارة «معتمد رسميًا» دون إثبات رسمي قابل للتحقق.</div>
+  </section>
+  <div class="footer">Sanad OS · نموذج واجهات أولي · لا يقدم استشارة قانونية ولا يتصل بخدمات خارجية</div>
+</main>
+</div>
+<nav class="mobile-bar" aria-label="التنقل على الهاتف">
+<button class="active" data-page="home"><span>⌂</span>الرئيسية</button><button data-page="assistant"><span>✧</span>اسألي سند</button><button data-page="rights"><span>⚖</span>الحقوق</button><button data-page="documents"><span>▤</span>مستنداتي</button><button data-page="cases"><span>☷</span>النزاعات</button>
+</nav>
+<script>
+const titles={home:["مرحبًا بك في سند","منصة متخصصة في قانون العمل الإماراتي وتنظيم المستندات العمالية"],assistant:["اسألي سند","مساعد تجريبي — لا توجد إجابات قانونية مولّدة أو مصادر مباشرة متصلة"],rights:["دليل الحقوق","موضوعات ضمن نطاق قانون العمل الإماراتي"],documents:["مستنداتي","إدارة تجريبية لسجلات المستندات — لا ترفعي ملفات حقيقية"],cases:["ملفات النزاع","تنظيم الوقائع والمرفقات قبل مراجعة الجهة المختصة"],admin:["بوابة الإدارة","متطلبات التشغيل والأمان والحوكمة"]};
+function go(page){document.querySelectorAll(".page").forEach(x=>x.classList.toggle("active",x.id==="page-"+page));document.querySelectorAll("[data-page]").forEach(x=>x.classList.toggle("active",x.dataset.page===page));document.getElementById("page-title").textContent=titles[page][0];document.getElementById("page-subtitle").textContent=titles[page][1];window.scrollTo({top:0,behavior:"smooth"})}
+document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.page)));
+document.querySelectorAll("[data-go]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.go)));
+document.getElementById("languageBtn").addEventListener("click",()=>alert("واجهة اللغة الإنجليزية غير منفذة بعد. يلزم إعداد ترجمة ومراجعة قانونية للنسخة الإنجليزية."));
+const topicInfo={
+salary:["الأجور والرواتب",["عقد العمل وأي تعديل مكتوب","كشوف الرواتب أو سجلات التحويل المتاحة","المراسلات المتعلقة بالمبالغ أو مواعيد السداد","تسلسل زمني بالمبالغ والفترات محل السؤال"]],
+contract:["عقد العمل",["نسخة العقد وأي ملحقات أو تعديلات","المسمى الوظيفي وتاريخ بدء العمل","المراسلات الرسمية المرتبطة بالشروط","تحديد السؤال أو الشرط المطلوب مراجعته"]],
+leave:["الإجازات",["سجل الإجازات المعتمد إن توفر","طلبات الإجازة والموافقات","كشف الرصيد من جهة العمل","تحديد الفترة والنوع محل الاستفسار"]],
+end:["نهاية الخدمة",["تاريخ بدء العمل وآخر يوم عمل","تفاصيل الأجر والعناصر الثابتة ذات الصلة","سبب وتاريخ انتهاء علاقة العمل","مستندات التسوية أو المخالصة إن وجدت"]],
+complaint:["الشكاوى والتسوية",["ملخص زمني للوقائع","العقد والمراسلات ذات الصلة","قائمة بالمستندات المتاحة والناقصة","تحديد الطلب المطلوب والجهة المختصة بعد التحقق"]],
+hours:["ساعات العمل",["جدول الدوام المعتمد","سجلات الحضور أو التكليف إن توفرت","مراسلات التكليف بساعات إضافية","تحديد الفترة والسؤال محل المراجعة"]]};
+document.querySelectorAll("[data-topic]").forEach(b=>b.addEventListener("click",()=>{const t=topicInfo[b.dataset.topic];document.getElementById("topicDetail").innerHTML="<h3>"+t[0]+" — قائمة تحضيرية</h3><ul>"+t[1].map(x=>"<li>"+x+"</li>").join("")+"</ul><p class='eyebrow'>هذه قائمة تنظيمية عامة وليست تأكيدًا لاستحقاق قانوني. تحققي من النص الرسمي الساري ومن انطباقه على حالتك.</p>"}));
+document.getElementById("chatForm").addEventListener("submit",e=>{e.preventDefault();const input=document.getElementById("chatInput"),q=input.value.trim();if(!q)return;const box=document.getElementById("chatBox");const u=document.createElement("div");u.className="bubble user";u.textContent=q;box.appendChild(u);const r=document.createElement("div");r.className="bubble bot";r.textContent="شكرًا على صياغة السؤال. هذه النسخة لا تتصل بعد بمحرك ذكاء اصطناعي أو بقاعدة تشريعات، لذلك لن أقدّم جوابًا قانونيًا قد يكون غير دقيق. للمتابعة، حددي نطاق العمل والوقائع، ثم تحققي من المصدر الرسمي أو استشيري مختصًا. يمكنك استخدام «دليل الحقوق» لإعداد قائمة بالمستندات.";box.appendChild(r);input.value="";box.scrollTop=box.scrollHeight});
+let docs=[],cases=[];
+function renderDocs(){const el=document.getElementById("docList");document.getElementById("docCount").textContent=docs.length;if(!docs.length){el.className="empty";el.innerHTML="<strong>لا توجد سجلات بعد</strong>أضيفي سجلًا تجريبيًا من النموذج أعلاه.";return}el.className="";el.innerHTML="<table class='table'><thead><tr><th>اسم السجل</th><th>النوع</th><th>ملاحظة</th><th></th></tr></thead><tbody>"+docs.map((d,i)=>"<tr><td>"+esc(d.name)+"</td><td>"+esc(d.type)+"</td><td>"+esc(d.note||"—")+"</td><td><button class='btn btn-light' data-rm-doc='"+i+"'>حذف</button></td></tr>").join("")+"</tbody></table>";el.querySelectorAll("[data-rm-doc]").forEach(b=>b.addEventListener("click",()=>{docs.splice(+b.dataset.rmDoc,1);renderDocs()}))}
+function renderCases(){const el=document.getElementById("caseList");document.getElementById("caseCount").textContent=cases.length;if(!cases.length){el.className="empty";el.innerHTML="<strong>لا توجد ملفات</strong>أنشئي ملفًا تجريبيًا من النموذج أعلاه.";return}el.className="";el.innerHTML="<table class='table'><thead><tr><th>الموضوع</th><th>التاريخ</th><th>الملخص</th><th></th></tr></thead><tbody>"+cases.map((c,i)=>"<tr><td>"+esc(c.type)+"</td><td>"+esc(c.date||"—")+"</td><td>"+esc(c.summary)+"</td><td><button class='btn btn-light' data-rm-case='"+i+"'>حذف</button></td></tr>").join("")+"</tbody></table>";el.querySelectorAll("[data-rm-case]").forEach(b=>b.addEventListener("click",()=>{cases.splice(+b.dataset.rmCase,1);renderCases()}))}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+document.getElementById("docForm").addEventListener("submit",e=>{e.preventDefault();docs.push({name:document.getElementById("docName").value,type:document.getElementById("docType").value,note:document.getElementById("docNote").value});e.target.reset();renderDocs()});
+document.getElementById("clearDocs").addEventListener("click",()=>{docs=[];renderDocs()});
+document.getElementById("caseForm").addEventListener("submit",e=>{e.preventDefault();cases.push({type:document.getElementById("caseType").value,date:document.getElementById("caseDate").value,summary:document.getElementById("caseSummary").value,request:document.getElementById("caseRequest").value});e.target.reset();renderCases()});
+document.getElementById("clearCases").addEventListener("click",()=>{cases=[];renderCases()});
+</script>
+</body></html>
